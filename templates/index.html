@@ -1,0 +1,17 @@
+<html>
+<head>
+<script>
+var someJavaScriptVar = '{{ butts }}';
+</script>
+<body>
+<p>Hello World</p>
+<button onclick="alert('butts: {{ butts }} ' + someJavaScriptVar)" />
+<form name="search" action="../flaskapp.py" method="get">
+Search: <input type="text" name="searchbox">
+<input type="submit" value="Submit">
+</form>
+<br>
+<br>
+<a href="{{ url_for('subscribe') }}"> Subscribe Here </a>
+</body>
+</html>

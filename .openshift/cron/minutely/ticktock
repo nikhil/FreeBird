@@ -1,0 +1,7 @@
+#!/bin/bash
+ echo "************ Cronny Started ***************"
+ date >> ${OPENSHIFT_LOG_DIR}/ticktock.log
+ date >> ${OPENSHIFT_LOG_DIR}/ticktock2.log
+ python ${OPENSHIFT_REPO_DIR}/hi.py
+ echo "************ Cronny Executed ***************"
+ date >> ${OPENSHIFT_LOG_DIR}/ticktock3.log

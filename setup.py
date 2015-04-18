@@ -1,10 +1,10 @@
 from setuptools import setup
 
-setup(name='YourAppName',
+setup(name='FlaskApp',
       version='1.0',
-      description='OpenShift App',
-      author='Your Name',
-      author_email='example@example.com',
+      description='A basic Flask app with static files',
+      author='Ryan Jarvinen',
+      author_email='ryanj@redhat.com',
       url='http://www.python.org/sigs/distutils-sig/',
-#      install_requires=['Django>=1.3'],
+     install_requires=['Flask>=0.10.1','requests>=2.5.1'],
      )
