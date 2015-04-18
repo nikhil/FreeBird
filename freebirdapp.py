@@ -70,7 +70,7 @@ def my_form_post():
     foodList = []
     nutrientList = [0] *23
     for status in result:
-        firstSplit = str(status.text).split("f:").lstrip()
+        firstSplit = str(status.text).split("f:")
         FoodOnStatus = firstSplit[1].split(",")
         for someFood in FoodOnStatus:
             foodtrimed1 = someFood.lstrip()
