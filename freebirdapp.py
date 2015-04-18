@@ -70,7 +70,7 @@ def my_form_post():
     foodList = []
     nutrientList = [0] *23
     for status in result:
-        firstSplit = status.split("f:").lstrip()
+        firstSplit = str(status.text).split("f:").lstrip()
         FoodOnStatus = firstSplit[1].split(",")
         for someFood in FoodOnStatus:
             foodtrimed1 = someFood.lstrip()
@@ -106,7 +106,7 @@ def subscribe():
         mongoUrl = os.environ['OPENSHIFT_MONGODB_DB_URL']
         client = MongoClient(mongoUrl)
         db = client.freebird
-        subscriptions = db.subscriptions        
+        subscriptions = db.doctors        
         name = request.form['name']
         handle = request.form['handle']
         number = request.form['number']
