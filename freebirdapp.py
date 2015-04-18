@@ -17,7 +17,7 @@ access_token_secret = 'rjOaYaXahSntjMgAazr1g7qpZzhP4drI4pFR0mbONqqn1'
 
 
 @app.route('/testTwitter')
-def getTweets();
+def getTweets():
     auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
     auth.set_access_token(access_token,access_token_secret)
     api = tweepy.API(auth)
