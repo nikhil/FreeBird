@@ -68,6 +68,9 @@ def my_form_post():
     sleepList = []
     interactList = []
     foodList = []
+    firstSplit= [0]*2
+    secondSplit=[0]*2
+    thirdSplit=[0]*2
     nutrientList = [0] *23
     for status in result:
         firstSplit = str(status.text).split("f:")

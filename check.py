@@ -10,10 +10,6 @@ access_token_secret = 'rjOaYaXahSntjMgAazr1g7qpZzhP4drI4pFR0mbONqqn1'
 auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
 auth.set_access_token(access_token,access_token_secret)
 api = tweepy.API(auth)
-result = api.user_timeline("RutgersU",count=10)
-for status in result:
-    p.pprint(str(status.text.encode("utf-8")))
-
 
 # put your own credentials here 
 ACCOUNT_SID = "ACd458c1d2873d89890101ad9ac3de1d3e" 
