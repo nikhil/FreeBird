@@ -1,10 +1,10 @@
 import tweepy
 import requests
 
-consumer_key = srvKbL93bcw21SqEVg2err0f5
-consumer_secret = jx10iqIW2suFUNHbGcYZBcZStpVfuq4kiEKCpiQBvlybI4urV8
-access_token = 3167857703-tAu2B9E6rqRmzoqMvlzKMX4qdQUEcaoC4wnd4uP
-access_token_secret = rjOaYaXahSntjMgAazr1g7qpZzhP4drI4pFR0mbONqqn1
+#consumer_key = srvKbL93bcw21SqEVg2err0f5
+#consumer_secret = jx10iqIW2suFUNHbGcYZBcZStpVfuq4kiEKCpiQBvlybI4urV8
+#access_token = 3167857703-tAu2B9E6rqRmzoqMvlzKMX4qdQUEcaoC4wnd4uP
+#access_token_secret = rjOaYaXahSntjMgAazr1g7qpZzhP4drI4pFR0mbONqqn1
 
 
 
