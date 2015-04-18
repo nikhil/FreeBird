@@ -1,3 +1,4 @@
 requests>=2.5.1
 pymongo>=2.7
 tweepy>=3.1.0
+twillio>=3.8.0
