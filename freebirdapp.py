@@ -25,13 +25,13 @@ def getTweets():
 
 @app.route('/')
 def index():
-    return render_template("my-form.html")
+    return render_template("index.html")
     #butts = "Butts are awesome"
     #return render_template('index.html',butts=butts)
 @app.route('/', methods=['POST'])
 def my_form_post():
 
-    text = request.form['text']
+    text = request.form['TwitterHandleBox']
     params3 = {'apikey': 'd8894db2dd60aed653e7bd91ea854ce91f46ec85', 'text': text, 'outputMode': 'json'}
     analyzedString = requests.get('http://access.alchemyapi.com/calls/text/TextGetTextSentiment',params=params3).json()
     return analyzedString['docSentiment']['score']

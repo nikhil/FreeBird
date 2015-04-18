@@ -4,10 +4,9 @@
 var someJavaScriptVar = '{{ butts }}';
 </script>
 <body>
-<p>Hello World</p>
-<button onclick="alert('butts: {{ butts }} ' + someJavaScriptVar)" />
-<form name="search" action="../flaskapp.py" method="get">
-Search: <input type="text" name="searchbox">
+<p>Enter the Twitter handle</p>
+<form name="TwitterHandle" action="../freebirdapp.py" method="get">
+Search: <input type="text" name="TwitterHandleBox">
 <input type="submit" value="Submit">
 </form>
 <br>
