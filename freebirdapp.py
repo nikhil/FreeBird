@@ -107,15 +107,16 @@ def my_form_post():
                 foodnutrients = requests.get('http://api.nal.usda.gov/usda/ndb/nutrients',params = nutrientsparams).json()
                 foodnutrients = foodnutrients['report']['foods'][0]['nutrients']
                 iterator = 0
-                for SomeNutrient in foodnutrients:
-                    if needToAppend:
+                if needToAppend:
+                    for SomeNutrient in foodnutrients:
                         if SomeNutrient['value'] != "--":
                             nutrientList[iterator].append(float(SomeNutrient['value']))
                         else:
                             nutrientList[iterator].append(0)
                         iterator = iterator +1
                         needToAppend = False
-                    else:
+                else:
+                    for SomeNutrient in foodnutrients:
                         if SomeNutrient['value'] != "--":
                             nutrientList[iterator][0]= nutrientList[iterator][0] + float(SomeNutrient['value'])
                         iterator = iterator +1
