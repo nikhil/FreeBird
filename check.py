@@ -28,14 +28,14 @@ for subscriber in subscriptions.find():
     number = subscriber['number']
     patientData = api.user_timeline(handle)
     for status in patientData:
-        if str(status.text).find("I can't take it"):
+        if str(status.text).find("I can't take it") and subscriber['sentMsg'] != 1:
             client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
-            doctorMessage = "Hello " + name +",\n You patient: "+handle+" needs urgent attention due to an alarming message submitted on twitter"
+            doctorMessage = "Hello " + name +",\n Your patient: "+handle+" needs urgent attention due to an alarming message submitted on twitter \n-FreeBird"
             doctorPhone = "+1"+number
             message = client.messages.create(body=doctorMessage,
                     to=doctorPhone,
                     from_="+17326540788") 
-
+            db.doctors.update(subscriber,{$set:{'sentMsg': 1}})             
 
 
 

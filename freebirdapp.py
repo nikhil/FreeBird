@@ -116,7 +116,9 @@ def subscribe():
         number = request.form['number']
         subscriber = {"name": name,
                 "handle": handle,
-                "number": number}
+                "number": number,
+                "sentMsg": 0
+                }
         subscriptions.insert(subscriber);
         return render_template('registered.html',name=name,handle=handle,number=number)
     else:
