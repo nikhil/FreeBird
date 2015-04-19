@@ -114,6 +114,7 @@ def my_form_post():
                         else:
                             nutrientList[iterator].append(0)
                         iterator = iterator +1
+                        needToAppend = False
                     else:
                         if SomeNutrient['value'] != "--":
                             nutrientList[iterator][0]= nutrientList[iterator][0] + float(SomeNutrient['value'])
