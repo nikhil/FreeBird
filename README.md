@@ -1,20 +1,30 @@
-# A basic Flask quickstart
-*With support for serving easy APIs and static content* [![Build Status](http://img.shields.io/travis/ryanj/flask-base.svg)](https://travis-ci.org/ryanj/flask-base)
+<img src="imgprogram.png">
+#FreeBird
+Helps allow Doctors easily monitor and visualize the mental health of patients, dietary, and sleeping pattern. Correlates nutrition and sleep with the changes in mood.
 
-[![LAUNCH ON OpenShift](https://launch-shifter.rhcloud.com/launch/LAUNCH ON.svg)](https://launch-shifter.rhcloud.com/r?url=https%3A%2F%2Fopenshift.redhat.com%2Fapp%2Fconsole%2Fapplication_type%2Fcustom%3F%26cartridges%5B%5D%3Dpython%26initial_git_url%3Dhttps%3A%2F%2Fgithub.com%2Fryanj%2Fflask-base.git%26name%3Dflask)
+http://freebird-nikhilkumar516.rhcloud.com/
 
-To deploy a clone of this application using the [`rhc` command line tool](http://rubygems.org/gems/rhc):
+#Format of a twitter post
+<code>
+I am very excited today. I feel very cheerful.
+s: 8
+i: 4
+f: chicken, pasta
+<code>
+`s` represents sleep\n
+`i` represents interactions\n
+`f` represents food\n
 
-    rhc app create flask python-2.7 --from-code=https://github.com/ryanj/flask-base.git
-    
-Or [link to a web-based clone+deploy](https://openshift.redhat.com/app/console/application_type/custom?cartridges%5B%5D=python-2.7&initial_git_url=https%3A%2F%2Fgithub.com%2Fryanj%2Fflask-base.git) on [OpenShift Online](http://OpenShift.com) or on [your own OpenShift cloud](http://openshift.github.io): 
+#Technologies used
 
-## Local server
-Start local webserver by running:
+* twitter
+* twilio
+* mongodb
+* openshift  
+* USDA
+* nutrition 
+* python
+* flask
+* html/javascript
+* alchemy 
 
-```bash
-python flaskapp.py
-```
-
-## License
-This code is dedicated to the public domain to the maximum extent permitted by applicable law, pursuant to CC0 (http://creativecommons.org/publicdomain/zero/1.0/)
