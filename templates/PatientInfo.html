@@ -4,7 +4,7 @@
 <body>
 	<script src="/javascript/Chart.js"></script>
 	<canvas id="myChart1" width="250" height="250"></canvas>
-	<canvas id="myChart2" width="25" height="25"></canvas>
+	<canvas id="myChart2" width="250" height="250"></canvas>
 	<canvas id="myChart3" width="25" height="25"></canvas>
 	<canvas id="myChart4" width="25" height="25"></canvas>
 	<canvas id="myChart5" width="25" height="25"></canvas>
@@ -54,7 +54,10 @@ var ctx23 = document.getElementById("myChart23").getContext("2d");
 var ctx24 = document.getElementById("myChart24").getContext("2d");
 
 var mood = {{ scoreList }};
-console.log(mood);
+var nutrient = {{ nutrientList }};
+var sleep = {{ sleepList }};
+var interact = {{ interactList }};
+
 var moodx = [];
 for(var i =0; i<mood.length; i++)
 {
@@ -63,7 +66,7 @@ for(var i =0; i<mood.length; i++)
 
 }	
 
-var data = {
+var moodData = {
     labels: moodx,
     datasets: [
         {
@@ -79,7 +82,66 @@ var data = {
     ]
 };
 
-var myLineChart1 = new Chart(ctx1).Line(data, {});
+var sleepx = [];
+
+
+var myLineChart1 = new Chart(ctx1).Line(moodData, {});
+
+for(var i =0; i<sleep.length; i++)
+{
+	sleepx[i] = i;
+
+
+}	
+
+var sleepData = {
+    labels: sleepx,
+    datasets: [
+        {
+            label: "Sleep",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: sleep
+        }           
+    ]
+};
+
+var myLineChart2 = new Chart(ctx2).Line(sleepData, {});
+
+var interactx = [];
+
+for(var i =0; i<interact.length; i++)
+{
+	interactx[i] = i;
+
+
+}	
+
+var interactData = {
+    labels: interactx,
+    datasets: [
+        {
+            label: "interact",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: interact
+        }           
+    ]
+};
+
+var myLineChart3 = new Chart(ctx3).Line(interactData, {});
+
+
+
+
 
 
 
