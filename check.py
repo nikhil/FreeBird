@@ -22,7 +22,7 @@ mongoUrl = os.environ['OPENSHIFT_MONGODB_DB_URL']
 client = MongoClient(mongoUrl)
 db = client.freebird
 subscriptions = db.doctors        
-for subscriber in subscriptions:
+for subscriber in subscriptions.find():
     name = subscriber['name']
     handle = subscriber['handle']
     number = subscriber['number']
