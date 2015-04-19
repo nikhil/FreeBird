@@ -80,7 +80,7 @@ def my_form_post():
             foodtrimed2 = foodtrimed1.rstrip()
             nutritionParams = {'api_key': 'hUcSk43rUxao7dedHXut06RxFf4oo8mdtsagoFbv', 'q': foodtrimed2,'format': 'json', 'sort': 'r'}
             nutritionFood = requests.get('http://api.nal.usda.gov/usda/ndb/search',params = nutritionParams)
-            if analyzedString.json()['errors']['error'][0]['status'] != 400:
+            if nutritionFood.json()['errors']['error'][0]['status'] != 400:
                 foodselected = nutritionFood.json()['list']['item'][0]['ndbno']
                 nutrientsparams = {'api_key': 'hUcSk43rUxao7dedHXut06RxFf4oo8mdtsagoFbv','format':'json','ndbno': foodselected, 'nutrients':nutrientid}
                 foodnutrients = requests.get('http://api.nal.usda.gov/usda/ndb/nutrients',params = nutrientsparams).json()
