@@ -2,12 +2,14 @@
 <head>
 	<link rel="stylesheet" href="/css/results.css">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>	
 <body class="main">
+	<h2>Enter your subscription information:</h2>
 	<form name="search" action="{{ url_for('subscribe') }}" method="post">
-		<input type="text" placeholder="name" name="name"><br>
-		<input type="text" placeholder="Twitter handle" name="handle"><br>
-		<input type="text"placeholder="Phone number" name="number"><br>
+		<i class="fa fa-user"></i><input type="text" placeholder="name" name="name"><br>
+		<i class="fa fa-twitter"></i><input type="text" placeholder="Twitter handle" name="handle"><br>
+		<i class="fa fa-mobile"></i><input type="text"placeholder="Phone number" name="number"><br>
 		<button class="pure-button" type="submit"> Submit </button>
 	</form> 
 </body>
