@@ -5,12 +5,12 @@ Helps allow Doctors easily monitor and visualize the mental health of patients, 
 http://freebird-nikhilkumar516.rhcloud.com/
 
 #Format of a twitter post
-<code>
+```
 I am very excited today. I feel very cheerful.
 s: 8
 i: 4
 f: chicken, pasta
-<code>
+```
 `s` represents sleep\n
 `i` represents interactions\n
 `f` represents food\n
