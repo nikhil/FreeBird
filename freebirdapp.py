@@ -87,8 +87,8 @@ def my_form_post():
                 foodnutrients = foodnutrients['report']['foods'][0]['nutrients']
                 iterator = 0
                 for SomeNutrient in foodnutrients:
-                    if SomeNutrient.value != "--":
-                        nutrientList[iterator].append(int(SomeNutrient.value))
+                    if SomeNutrient['value'] != "--":
+                        nutrientList[iterator].append(int(SomeNutrient['value']))
                     else:
                         nutrientList[iterator].append(0)
                     iterator = iterator +1
