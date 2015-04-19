@@ -1,11 +1,14 @@
 <html>
 <head>
-<body>
+	<link rel="stylesheet" href="/css/results.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+</head>	
+<body class="main">
 	<form name="search" action="{{ url_for('subscribe') }}" method="post">
-		Name: <input type="text" name="name"><br>
-		handle: <input type="text" name="handle"><br>
-		number <input type="text" name="number"><br>
-		<button type="submit">
+		<input type="text" placeholder="name" name="name"><br>
+		<input type="text" placeholder="Twitter handle" name="handle"><br>
+		<input type="text"placeholder="Phone number" name="number"><br>
+		<button class="pure-button" type="submit"> Submit </button>
 	</form> 
 </body>
 </html>
