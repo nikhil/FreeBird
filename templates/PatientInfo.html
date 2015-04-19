@@ -1,12 +1,14 @@
 <html>
 <head>
 	<link href="/css/results1.css" rel="stylesheet">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 </head>	
 <body class="main">
 	<h1>Info for Patient: {{twitterHandle}}</h1>
 	<p> Highest correlation between mood is {{maxstr}} with a correlation value of {{maxc}}</p>
 	<script src="/javascript/Chart.js"></script>
 	<div class="graphBox">
+		<h2><i class="fa fa-line-chart"></i> Results: </h2>
 	<div id="div1">
 		<h2 class="chartTitle">Mood</h2>
 	<canvas id="myChart1" width="250" height="250"></canvas>
