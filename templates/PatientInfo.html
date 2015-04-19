@@ -1,6 +1,88 @@
 <html>
 <head>
+</head>	
 <body>
+	<script src="/javascript/Chart.js"></script>
+	<canvas id="myChart1" width="25" height="25"></canvas>
+	<canvas id="myChart2" width="25" height="25"></canvas>
+	<canvas id="myChart3" width="25" height="25"></canvas>
+	<canvas id="myChart4" width="25" height="25"></canvas>
+	<canvas id="myChart5" width="25" height="25"></canvas>
+	<canvas id="myChart6" width="25" height="25"></canvas>
+	<canvas id="myChart7" width="25" height="25"></canvas>
+	<canvas id="myChart8" width="25" height="25"></canvas>
+	<canvas id="myChart9" width="25" height="25"></canvas>
+	<canvas id="myChart10" width="25" height="25"></canvas>
+	<canvas id="myChart11" width="25" height="25"></canvas>
+	<canvas id="myChart12" width="25" height="25"></canvas>
+	<canvas id="myChart13" width="25" height="25"></canvas>
+	<canvas id="myChart14" width="25" height="25"></canvas>
+	<canvas id="myChart15" width="25" height="25"></canvas>
+	<canvas id="myChart16" width="25" height="25"></canvas>
+	<canvas id="myChart17" width="25" height="25"></canvas>
+	<canvas id="myChart18" width="25" height="25"></canvas>
+	<canvas id="myChart19" width="25" height="25"></canvas>
+	<canvas id="myChart20" width="25" height="25"></canvas>
+	<canvas id="myChart21" width="25" height="25"></canvas>
+	<canvas id="myChart22" width="25" height="25"></canvas>
+	<canvas id="myChart23" width="25" height="25"></canvas>
+	<canvas id="myChart24" width="25" height="25"></canvas>
+<script type="text/javascript">
+var ctx1 = document.getElementById("myChart1").getContext("2d");
+var ctx2 = document.getElementById("myChart2").getContext("2d");
+var ctx3 = document.getElementById("myChart3").getContext("2d");
+var ctx4 = document.getElementById("myChart4").getContext("2d");
+var ctx5 = document.getElementById("myChart5").getContext("2d");
+var ctx6 = document.getElementById("myChart6").getContext("2d");
+var ctx7 = document.getElementById("myChart7").getContext("2d");
+var ctx8 = document.getElementById("myChart8").getContext("2d");
+var ctx9 = document.getElementById("myChart9").getContext("2d");
+var ctx10 = document.getElementById("myChart10").getContext("2d");
+var ctx11 = document.getElementById("myChart11").getContext("2d");
+var ctx12 = document.getElementById("myChart12").getContext("2d");
+var ctx13 = document.getElementById("myChart13").getContext("2d");
+var ctx14 = document.getElementById("myChart14").getContext("2d");
+var ctx15 = document.getElementById("myChart15").getContext("2d");
+var ctx16 = document.getElementById("myChart16").getContext("2d");
+var ctx17 = document.getElementById("myChart17").getContext("2d");
+var ctx18 = document.getElementById("myChart18").getContext("2d");
+var ctx19 = document.getElementById("myChart19").getContext("2d");
+var ctx20 = document.getElementById("myChart20").getContext("2d");
+var ctx21 = document.getElementById("myChart21").getContext("2d");
+var ctx22 = document.getElementById("myChart22").getContext("2d");
+var ctx23 = document.getElementById("myChart23").getContext("2d");
+var ctx24 = document.getElementById("myChart24").getContext("2d");
+
+var mood = '{{ scoreList }}';
+var moodx = [];
+for(var i =0; i<mood.length; i++)
+{
+	moodx[i] = i;
+
+
+}	
+
+var data = {
+    labels: moodx,
+    datasets: [
+        {
+            label: "Mood",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: mood
+        }           
+    ]
+};
+
+var myLineChart1 = new Chart(ctx1).Line(data, {});
+
+
+
+</script>
 <p>Responce</p>
 </body>
 </html>
