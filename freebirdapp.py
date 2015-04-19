@@ -102,7 +102,7 @@ def my_form_post():
         journal = thirdSplit[0]
         Alchemyparams = {'apikey': 'd8894db2dd60aed653e7bd91ea854ce91f46ec85', 'text': str(journal), 'outputMode': 'json'}
         analyzedString = requests.get('http://access.alchemyapi.com/calls/text/TextGetTextSentiment',params=Alchemyparams).json()
-        scoreList.append(analyzedString['docSentiment']['score'])
+        scoreList.append(float(analyzedString['docSentiment']['score']))
     return render_template('PatientInfo.html',nutrientList=nutrientList,interactList=interactList,sleepList=sleepList,scoreList=scoreList) 
 @app.route('/subscribe',methods=['GET', 'POST'])
 def subscribe():
