@@ -1,14 +1,29 @@
 <html>
 <head>
-<body>
-	<p>Enter the info to unsubscibe;</p>
-	<form name="search" action="{{ url_for('unsubscribe') }}" method="post">
-		Name: <input type="text" name="name"><br>
-		handle: <input type="text" name="handle"><br>
-		number <input type="text" name="number"><br>
-		<button type="submit">
+	<link rel="stylesheet" href="/css/results.css">
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato|Arvo:400,700' rel='stylesheet' type='text/css'>
+</head>	
+<body class="main">
+	<h2>Enter your known subscription information:</h2>
+	<form class="pure-form pure-form-aligned" name="search" action="{{ url_for('unsubscribe') }}" method="post">
+		<div class="pure-control-group">
+			<label for="name" style="width:1em;"><i class="fa fa-user"></i></label>
+			<input type="text" placeholder="name" name="name" id="name">
+		</div>
+		<div class="pure-control-group">
+			<label for="handle" style="width:1em;"><i class="fa fa-twitter"></i></label>
+			<input type="text" placeholder="Twitter handle" name="handle" id="handle">
+		</div>
+		<div class="pure-control-group">
+			<label for="number" style="width:1em;"><i class="fa fa-mobile"></i></label>
+			<input type="text"placeholder="Phone number" name="number" id="number">
+		</div>
+		<button class="pure-button" type="submit"> Submit </button>
 	</form> 
 </body>
 </html>
+
 
 
