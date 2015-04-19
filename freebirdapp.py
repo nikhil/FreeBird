@@ -171,7 +171,7 @@ def my_form_post():
         maxc = numpy.mean(numpy.corrcoef(scoreList,nutrientList[9])[0])
         maxstr = "fat"
 
-    return render_template('PatientInfo.html',nutrientList=nutrientList,interactList=interactList,sleepList=sleepList,scoreList=scoreList,maxc=maxc,maxstr=maxstr) 
+    return render_template('PatientInfo.html',nutrientList=nutrientList,interactList=interactList,sleepList=sleepList,scoreList=scoreList,maxc=maxc,maxstr=maxstr,twitterHandle=twitterHandle) 
 @app.route('/subscribe',methods=['GET', 'POST'])
 def subscribe():
     if request.method == 'POST':
