@@ -11,9 +11,9 @@ s: 8
 i: 4
 f: chicken, pasta
 ```
-`s` represents sleep\n
-`i` represents interactions\n
-`f` represents food\n
+`s` represents sleep<br>
+`i` represents interactions<br>
+`f` represents food<br>
 
 #Technologies used
 
