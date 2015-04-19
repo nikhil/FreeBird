@@ -133,47 +133,45 @@ def my_form_post():
         scoreList.append(float(analyzedString['docSentiment']['score']))
     maxc = 0
     maxstr = ""
-    if abs(numpy.corrcoef(scoreList,sleepList) > abs(maxc):
+    if abs(numpy.corrcoef(scoreList,sleepList)) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,sleepList)
         maxstr = "Sleep"
-    if abs(numpy.corrcoef(scoreList,interactList) > abs(maxc):
+    if abs(numpy.corrcoef(scoreList,interactList)) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,interactList)
         maxstr = "Interactions"
-    if abs(numpy.corrcoef(scoreList,nutrientList[0]) > abs(maxc):
+    if abs(numpy.corrcoef(scoreList,nutrientList[0])) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,nutrientList[0])
-        maxstr = "Nutrition"
-    if abs(numpy.corrcoef(scoreList,nutrientList[1]) > abs(maxc):
+        maxstr = "Calcuim"
+    if abs(numpy.corrcoef(scoreList,nutrientList[1])) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,nutrientList[1])
-        maxstr = "Nutrition1"
-    if abs(numpy.corrcoef(scoreList,nutrientList[2]) > abs(maxc):
+        maxstr = "carbohydrate"
+    if abs(numpy.corrcoef(scoreList,nutrientList[2])) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,nutrientList[2])
-        maxstr = "Sleep"
-    if abs(numpy.corrcoef(scoreList,nutrientList[3]) > abs(maxc):
+        maxstr = "cholesterol"
+    if abs(numpy.corrcoef(scoreList,nutrientList[3])) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,nutrientList[3])
-        maxstr = "Sleep"
-    if abs(numpy.corrcoef(scoreList,nutrientList[4]) > abs(maxc):
+        maxstr = "energy"
+    if abs(numpy.corrcoef(scoreList,nutrientList[4])) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,nutrientList[4])
-        maxstr = "Sleep"
-    if abs(numpy.corrcoef(scoreList,nutrientList[5]) > abs(maxc):
+        maxstr = "Fiber"
+    if abs(numpy.corrcoef(scoreList,nutrientList[5])) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,nutrientList[5])
-        maxstr = "Sleep"
-    if abs(numpy.corrcoef(scoreList,nutrientList[6]) > abs(maxc):
+        maxstr = "Iron"
+    if abs(numpy.corrcoef(scoreList,nutrientList[6])) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,nutrientList[6])
-        maxstr = "Sleep"
-    if abs(numpy.corrcoef(scoreList,nutrientList[7]) > abs(maxc):
+        maxstr = "Magnesium"
+    if abs(numpy.corrcoef(scoreList,nutrientList[7])) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,nutrientList[7])
-        maxstr = "Sleep"
-    if abs(numpy.corrcoef(scoreList,nutrientList[8]) > abs(maxc):
+        maxstr = "zinc"
+    if abs(numpy.corrcoef(scoreList,nutrientList[8])) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,nutrientList[8])
-        maxstr = "Sleep"
-    if abs(numpy.corrcoef(scoreList,nutrientList[9]) > abs(maxc):
+        maxstr = "water"
+    if abs(numpy.corrcoef(scoreList,nutrientList[9])) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,nutrientList[9])
-        maxstr = "Slenep"
+        maxstr = "fat"
 
    
-
-
-            
+        
 
         
             
