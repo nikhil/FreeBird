@@ -54,8 +54,6 @@ def getTweets():
 @app.route('/')
 def index():
     return render_template("index.html")
-    #butts = "Butts are awesome"
-    #return render_template('index.html',butts=butts) 
 @app.route('/', methods=['POST'])
 def my_form_post():
 
@@ -96,7 +94,6 @@ def my_form_post():
                         nutrientList[iterator].append(0)
                     iterator = iterator +1
         secondSplit = firstSplit[0].split("i:")
-        print secondSplit
         interaction = secondSplit[1].lstrip()
         interactList.append(interaction)
         thirdSplit = secondSplit[0].split("s:")
@@ -124,6 +121,24 @@ def subscribe():
         return render_template('registered.html',name=name,handle=handle,number=number)
     else:
         return render_template('subscribe.html')
+@app.route('/unsubscribe',methods=['GET','POST'])
+def unsubscribe():
+    if request.method == 'POST':
+        mongoUrl = os.environ['OPENSHIFT_MONGODB_DB_URL']
+        client = MongoClient(mongoUrl)
+        db = client.freebird
+        subscriptions = db.doctors        
+        name = request.form['name']
+        handle = request.form['handle']
+        number = request.form['number']
+        subscriber = {"name": name,
+                "handle": handle,
+                "number": number}
+        subscriptions.remove(subscriber);
+        return render_template('unregistered.html',name=name,handle=handle,number=number)
+    else:
+        return render_template('unsubscribe.html')
+
 
 @app.route('/checklist')
 def printlist():
