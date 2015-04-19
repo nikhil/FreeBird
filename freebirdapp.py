@@ -134,41 +134,41 @@ def my_form_post():
         scoreList.append(float(analyzedString['docSentiment']['score']))
     maxc = 0
     maxstr = ""
-    if abs(numpy.corrcoef(scoreList,sleepList)) > abs(maxc):
-        maxc = numpy.corrcoef(scoreList,sleepList)
+    if abs(numpy.mean(numpy.corrcoef(scoreList,sleepList)[0])) > abs(maxc):
+        maxc = numpy.mean(numpy.corrcoef(scoreList,sleepList)[0])
         maxstr = "Sleep"
-    if abs(numpy.corrcoef(scoreList,interactList)) > abs(maxc):
-        maxc = numpy.corrcoef(scoreList,interactList)
+    if abs(numpy.mean(numpy.corrcoef(scoreList,interactList)[0])) > abs(maxc):
+        maxc = numpy.mean(numpy.corrcoef(scoreList,interactList)[0])
         maxstr = "Interactions"
-    if abs(numpy.corrcoef(scoreList,nutrientList[0])) > abs(maxc):
-        maxc = numpy.corrcoef(scoreList,nutrientList[0])
+    if abs(numpy.mean(numpy.corrcoef(scoreList,nutrientList[0])[0]))> abs(maxc):
+        maxc = numpy.mean(numpy.corrcoef(scoreList,nutrientList[0])[0])
         maxstr = "Calcuim"
-    if abs(numpy.corrcoef(scoreList,nutrientList[1])) > abs(maxc):
-        maxc = numpy.corrcoef(scoreList,nutrientList[1])
+    if abs(numpy.mean(numpy.corrcoef(scoreList,nutrientList[1])[0])) > abs(maxc):
+        maxc = numpy.mean(numpy.corrcoef(scoreList,nutrientList[1])[0])
         maxstr = "carbohydrate"
-    if abs(numpy.corrcoef(scoreList,nutrientList[2])) > abs(maxc):
-        maxc = numpy.corrcoef(scoreList,nutrientList[2])
+    if abs(numpy.mean(numpy.corrcoef(scoreList,nutrientList[2])[0])) > abs(maxc):
+        maxc = numpy.mean(numpy.corrcoef(scoreList,nutrientList[2])[0])
         maxstr = "cholesterol"
-    if abs(numpy.corrcoef(scoreList,nutrientList[3])) > abs(maxc):
-        maxc = numpy.corrcoef(scoreList,nutrientList[3])
+    if abs(numpy.mean(numpy.corrcoef(scoreList,nutrientList[3])[0])) > abs(maxc):
+        maxc = numpy.mean(numpy.corrcoef(scoreList,nutrientList[3])[0])
         maxstr = "energy"
-    if abs(numpy.corrcoef(scoreList,nutrientList[4])) > abs(maxc):
-        maxc = numpy.corrcoef(scoreList,nutrientList[4])
+    if abs(numpy.mean(numpy.corrcoef(scoreList,nutrientList[4])[0])) > abs(maxc):
+        maxc = numpy.mean(numpy.corrcoef(scoreList,nutrientList[4])[0])
         maxstr = "Fiber"
-    if abs(numpy.corrcoef(scoreList,nutrientList[5])) > abs(maxc):
-        maxc = numpy.corrcoef(scoreList,nutrientList[5])
+    if abs(numpy.mean(numpy.corrcoef(scoreList,nutrientList[5])[0])) > abs(maxc):
+        maxc = numpy.mean(numpy.corrcoef(scoreList,nutrientList[5])[0])
         maxstr = "Iron"
-    if abs(numpy.corrcoef(scoreList,nutrientList[6])) > abs(maxc):
-        maxc = numpy.corrcoef(scoreList,nutrientList[6])
+    if abs(numpy.mean(numpy.corrcoef(scoreList,nutrientList[6])[0])) > abs(maxc):
+        maxc = numpy.mean(numpy.corrcoef(scoreList,nutrientList[6])[0])
         maxstr = "Magnesium"
-    if abs(numpy.corrcoef(scoreList,nutrientList[7])) > abs(maxc):
-        maxc = numpy.corrcoef(scoreList,nutrientList[7])
+    if abs(numpy.mean(numpy.corrcoef(scoreList,nutrientList[7])[0])) > abs(maxc):
+        maxc = numpy.mean(numpy.corrcoef(scoreList,nutrientList[7])[0])
         maxstr = "zinc"
-    if abs(numpy.corrcoef(scoreList,nutrientList[8])) > abs(maxc):
-        maxc = numpy.corrcoef(scoreList,nutrientList[8])
+    if abs(numpy.mean(numpy.corrcoef(scoreList,nutrientList[8])[0])) > abs(maxc):
+        maxc = numpy.mean(numpy.corrcoef(scoreList,nutrientList[8])[0])
         maxstr = "water"
-    if abs(numpy.corrcoef(scoreList,nutrientList[9])) > abs(maxc):
-        maxc = numpy.corrcoef(scoreList,nutrientList[9])
+    if abs(numpy.mean(numpy.corrcoef(scoreList,nutrientList[9])[0])) > abs(maxc):
+        maxc = numpy.mean(numpy.corrcoef(scoreList,nutrientList[9])[0])
         maxstr = "fat"
 
    
