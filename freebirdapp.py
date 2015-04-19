@@ -16,7 +16,7 @@ consumer_secret = 'jx10iqIW2suFUNHbGcYZBcZStpVfuq4kiEKCpiQBvlybI4urV8'
 access_token = '3167857703-tAu2B9E6rqRmzoqMvlzKMX4qdQUEcaoC4wnd4uP'
 access_token_secret = 'rjOaYaXahSntjMgAazr1g7qpZzhP4drI4pFR0mbONqqn1'
 
-nutrientid = [301, 205, 601, 208, 291, 303, 304, 406, 305, 306, 203, 307, 209, 269, 318,401,324,323,255,204]
+nutrientid = [301, 205, 601, 208, 291, 303, 304, 309, 255, 204]
 nutrientid2 = [578, 401, 324, 323, 430, 255, 309, 204]
 
 
@@ -70,9 +70,28 @@ def my_form_post():
     secondSplit=[0]*2
     thirdSplit=[0]*2
     nutrientList = [0] *23
-    emptyList = []
-    for i in range(len(nutrientList)):
-        nutrientList[i] = emptyList
+    emptyList0 = []
+    emptyList1 = []
+    emptyList2 = []
+    emptyList3 = []
+    emptyList4 = []
+    emptyList5 = []
+    emptyList6 = []
+    emptyList7 = []
+    emptyList8 = []
+    emptyList9 = []
+
+    nutrientList[0] = emptyList0
+    nutrientList[1] = emptyList1
+    nutrientList[2] = emptyList2
+    nutrientList[3] = emptyList3
+    nutrientList[4] = emptyList4
+    nutrientList[5] = emptyList5
+    nutrientList[6] = emptyList6
+    nutrientList[7] = emptyList7
+    nutrientList[8] = emptyList8
+    nutrientList[9] = emptyList9
+
     for status in result:
         firstSplit = str(status.text).split("f:")
         FoodOnStatus = firstSplit[1].split(",")
