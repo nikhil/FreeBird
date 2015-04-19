@@ -1,6 +1,9 @@
+import os
 import tweepy
 import requests
-from twilio.rest import TwilioRestClient 
+from twilio.rest import TwilioRestClient
+from pymongo import MongoClient
+
 
 consumer_key = 'srvKbL93bcw21SqEVg2err0f5'
 consumer_secret = 'jx10iqIW2suFUNHbGcYZBcZStpVfuq4kiEKCpiQBvlybI4urV8'
