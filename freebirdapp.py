@@ -72,6 +72,9 @@ def my_form_post():
     secondSplit=[0]*2
     thirdSplit=[0]*2
     nutrientList = [0] *23
+    emptyList = []
+    for i in range(len(nutrientList)):
+        nutrientList[i] = emptyList
     for status in result:
         firstSplit = str(status.text).split("f:")
         FoodOnStatus = firstSplit[1].split(",")
