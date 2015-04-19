@@ -35,7 +35,7 @@ for subscriber in subscriptions.find():
             message = client.messages.create(body=doctorMessage,
                     to=doctorPhone,
                     from_="+17326540788") 
-            db.doctors.update_one(subscriber,{"$set":{'sentMsg': 1}})             
+            db.doctors.update(subscriber,{"$set":{'sentMsg': 1}})             
             list(db.test.find()) 
 
 
