@@ -131,8 +131,8 @@ def my_form_post():
         Alchemyparams = {'apikey': 'd8894db2dd60aed653e7bd91ea854ce91f46ec85', 'text': str(journal), 'outputMode': 'json'}
         analyzedString = requests.get('http://access.alchemyapi.com/calls/text/TextGetTextSentiment',params=Alchemyparams).json()
         scoreList.append(float(analyzedString['docSentiment']['score']))
-    var maxc = 0;
-    var maxstr = ""
+    maxc = 0
+    maxstr = ""
     if abs(numpy.corrcoef(scoreList,sleepList) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,sleepList)
         maxstr = "Sleep"
