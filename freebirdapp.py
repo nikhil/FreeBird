@@ -96,6 +96,7 @@ def my_form_post():
                         nutrientList[iterator].append(0)
                     iterator = iterator +1
         secondSplit = firstSplit[0].split("i:")
+        print secondSplit
         interaction = secondSplit[1].lstrip()
         interactList.append(interaction)
         thirdSplit = secondSplit[0].split("s:")
