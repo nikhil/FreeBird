@@ -1,3 +1,13 @@
+.main
+{
+  margin: 0px;
+  padding: 0px;
+  background-color: #eee8d5;
+  color: #004C4C
+
+
+}	
+
 #div1
 {
   float: left;
@@ -12,5 +22,16 @@
 {
 
 text-align: center;
+
+}
+
+.graphBox
+{
+
+  background-color: #fdf6e3;
+  padding-bottom: 35px;
+  -webkit-box-shadow: -3px -3px 10px 0px rgba(50, 50, 50, 0.79);
+  -moz-box-shadow: -3px -3px 10px 0px rgba(50, 50, 50, 0.79);
+  box-shadow: -3px -3px 10px 0px rgba(50, 50, 50, 0.79);
 
 }	
