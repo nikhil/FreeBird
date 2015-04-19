@@ -95,10 +95,10 @@ def my_form_post():
                     iterator = iterator +1
         secondSplit = firstSplit[0].split("i:")
         interaction = secondSplit[1].lstrip()
-        interactList.append(interaction)
+        interactList.append(float(interaction))
         thirdSplit = secondSplit[0].split("s:")
         sleep = thirdSplit[1].lstrip()
-        sleepList.append(sleep)  
+        sleepList.append(float(sleep))  
         journal = thirdSplit[0]
         Alchemyparams = {'apikey': 'd8894db2dd60aed653e7bd91ea854ce91f46ec85', 'text': str(journal), 'outputMode': 'json'}
         analyzedString = requests.get('http://access.alchemyapi.com/calls/text/TextGetTextSentiment',params=Alchemyparams).json()
