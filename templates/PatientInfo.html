@@ -6,27 +6,16 @@
 	<canvas id="myChart1" width="250" height="250"></canvas>
 	<canvas id="myChart2" width="250" height="250"></canvas>
 	<canvas id="myChart3" width="250" height="250"></canvas>
-	<canvas id="myChart4" width="25" height="25"></canvas>
-	<canvas id="myChart5" width="25" height="25"></canvas>
-	<canvas id="myChart6" width="25" height="25"></canvas>
-	<canvas id="myChart7" width="25" height="25"></canvas>
-	<canvas id="myChart8" width="25" height="25"></canvas>
-	<canvas id="myChart9" width="25" height="25"></canvas>
-	<canvas id="myChart10" width="25" height="25"></canvas>
-	<canvas id="myChart11" width="25" height="25"></canvas>
-	<canvas id="myChart12" width="25" height="25"></canvas>
-	<canvas id="myChart13" width="25" height="25"></canvas>
-	<canvas id="myChart14" width="25" height="25"></canvas>
-	<canvas id="myChart15" width="25" height="25"></canvas>
-	<canvas id="myChart16" width="25" height="25"></canvas>
-	<canvas id="myChart17" width="25" height="25"></canvas>
-	<canvas id="myChart18" width="25" height="25"></canvas>
-	<canvas id="myChart19" width="25" height="25"></canvas>
-	<canvas id="myChart20" width="25" height="25"></canvas>
-	<canvas id="myChart21" width="25" height="25"></canvas>
-	<canvas id="myChart22" width="25" height="25"></canvas>
-	<canvas id="myChart23" width="25" height="25"></canvas>
-	<canvas id="myChart24" width="25" height="25"></canvas>
+	<canvas id="myChart4" width="250" height="250"></canvas>
+	<canvas id="myChart5" width="250" height="250"></canvas>
+	<canvas id="myChart6" width="250" height="250"></canvas>
+	<canvas id="myChart7" width="250" height="250"></canvas>
+	<canvas id="myChart8" width="250" height="250"></canvas>
+	<canvas id="myChart9" width="250" height="250"></canvas>
+	<canvas id="myChart10" width="250" height="250"></canvas>
+	<canvas id="myChart11" width="250" height="250"></canvas>
+	<canvas id="myChart12" width="250" height="250"></canvas>
+	<canvas id="myChart13" width="250" height="250"></canvas>
 <script type="text/javascript">
 var ctx1 = document.getElementById("myChart1").getContext("2d");
 var ctx2 = document.getElementById("myChart2").getContext("2d");
@@ -41,17 +30,6 @@ var ctx10 = document.getElementById("myChart10").getContext("2d");
 var ctx11 = document.getElementById("myChart11").getContext("2d");
 var ctx12 = document.getElementById("myChart12").getContext("2d");
 var ctx13 = document.getElementById("myChart13").getContext("2d");
-var ctx14 = document.getElementById("myChart14").getContext("2d");
-var ctx15 = document.getElementById("myChart15").getContext("2d");
-var ctx16 = document.getElementById("myChart16").getContext("2d");
-var ctx17 = document.getElementById("myChart17").getContext("2d");
-var ctx18 = document.getElementById("myChart18").getContext("2d");
-var ctx19 = document.getElementById("myChart19").getContext("2d");
-var ctx20 = document.getElementById("myChart20").getContext("2d");
-var ctx21 = document.getElementById("myChart21").getContext("2d");
-var ctx22 = document.getElementById("myChart22").getContext("2d");
-var ctx23 = document.getElementById("myChart23").getContext("2d");
-var ctx24 = document.getElementById("myChart24").getContext("2d");
 
 var mood = {{ scoreList }};
 var nutrient = {{ nutrientList }};
@@ -139,8 +117,287 @@ var interactData = {
 
 var myLineChart3 = new Chart(ctx3).Line(interactData, {});
 
+var nutrition0 = nutrient[0];
+var nutrition1 = nutrient[1];
+var nutrition2 = nutrient[2];
+var nutrition3 = nutrient[3];
+var nutrition4 = nutrient[4];
+var nutrition5 = nutrient[5];
+var nutrition6 = nutrient[6];
+var nutrition7 = nutrient[7];
+var nutrition8 = nutrient[8];
+var nutrition9 = nutrient[9];
+
+var n0x = [];
+
+for(var i =0; i<nutrition0.length; i++)
+{
+	n0x[i] = i;
 
 
+}	
+
+var n0d = {
+    labels: n0x,
+    datasets: [
+        {
+            label: "nutrition1",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: nutrition0
+
+        }           
+    ]
+};
+
+var myLineChart4 = new Chart(ctx4).Line(n0d, {});
+
+var n1x = [];
+
+for(var i =0; i<nutrition1.length; i++)
+{
+	n1x[i] = i;
+
+
+}	
+
+var n1d = {
+    labels: n1x,
+    datasets: [
+        {
+            label: "nutrition2",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: nutrition1
+        }           
+    ]
+};
+
+var myLineChart5 = new Chart(ctx5).Line(n1d, {});
+
+var n2x = [];
+
+for(var i =0; i<nutrition2.length; i++)
+{
+	n2x[i] = i;
+
+
+}	
+
+var n2d = {
+    labels: n2x,
+    datasets: [
+        {
+            label: "nutrition3",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: nutrition2
+        }           
+    ]
+};
+
+var myLineChart6 = new Chart(ctx6).Line(n2d, {});
+
+var n3x = [];
+
+for(var i =0; i<nutrition3.length; i++)
+{
+	n3x[i] = i;
+
+
+}	
+
+var n3d = {
+    labels: n3x,
+    datasets: [
+        {
+            label: "nutrition4",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: nutrition3
+        }           
+    ]
+};
+
+var myLineChart7 = new Chart(ctx7).Line(n3d, {});
+
+var n4x = [];
+
+for(var i =0; i<nutrition4.length; i++)
+{
+	n4x[i] = i;
+
+
+}	
+
+var n4d = {
+    labels: n4x,
+    datasets: [
+        {
+            label: "nutrition5",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: nutrition4
+        }           
+    ]
+};
+
+var myLineChart8 = new Chart(ctx8).Line(n4d, {});
+
+var n5x = [];
+
+for(var i =0; i<nutrition5.length; i++)
+{
+	n5x[i] = i;
+
+
+}	
+
+var n5d = {
+    labels: n5x,
+    datasets: [
+        {
+            label: "nutrition6",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: nutrition5
+        }           
+    ]
+};
+
+var myLineChart9 = new Chart(ctx9).Line(n5d, {});
+
+var n6x = [];
+
+for(var i =0; i<nutrition6.length; i++)
+{
+	n6x[i] = i;
+
+
+}	
+
+var n6d = {
+    labels: n6x,
+    datasets: [
+        {
+            label: "nutrition7",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: nutrition6
+        }           
+    ]
+};
+
+var myLineChart10 = new Chart(ctx10).Line(n6d, {});
+
+var n7x = [];
+
+for(var i =0; i<nutrition7.length; i++)
+{
+	n7x[i] = i;
+
+
+}	
+
+var n7d = {
+    labels: n7x,
+    datasets: [
+        {
+            label: "nutrition8",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: nutrition7
+        }           
+    ]
+};
+
+var myLineChart11 = new Chart(ctx11).Line(n7d, {});
+
+var n8x = [];
+
+for(var i =0; i<nutrition8.length; i++)
+{
+	n8x[i] = i;
+
+
+}	
+
+var n8d = {
+    labels: n8x,
+    datasets: [
+        {
+            label: "nutrition9",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: nutrition8
+        }           
+    ]
+};
+
+var myLineChart12 = new Chart(ctx12).Line(n8d, {});
+
+var n9x = [];
+
+for(var i =0; i<nutrition9.length; i++)
+{
+	n9x[i] = i;
+
+
+}	
+
+var n9d = {
+    labels: n9x,
+    datasets: [
+        {
+            label: "nutrition10",
+            fillColor: "rgba(220,220,220,0.2)",
+            strokeColor: "rgba(220,220,220,1)",
+            pointColor: "rgba(220,220,220,1)",
+            pointStrokeColor: "#fff",
+            pointHighlightFill: "#fff",
+            pointHighlightStroke: "rgba(220,220,220,1)",
+            data: nutrition9
+        }           
+    ]
+};
+
+var myLineChart13 = new Chart(ctx13).Line(n9d, {});
 
 
 
