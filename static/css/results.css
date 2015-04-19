@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 .chartTitle
 {
 text-align: center;
+padding-top: 90px;
 }
 
 input

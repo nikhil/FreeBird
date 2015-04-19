@@ -121,9 +121,12 @@ var ctx12 = document.getElementById("myChart12").getContext("2d");
 var ctx13 = document.getElementById("myChart13").getContext("2d");
 
 var mood = {{ scoreList }};
+mood.reverse();
 var nutrient = {{ nutrientList }};
 var sleep = {{ sleepList }};
+sleep.reverse();
 var interact = {{ interactList }};
+interactList.reverse();
 
 var moodx = [];
 for(var i =0; i<mood.length; i++)
@@ -206,16 +209,16 @@ var interactData = {
 
 var myLineChart3 = new Chart(ctx3).Line(interactData, {});
 
-var nutrition0 = nutrient[0];
-var nutrition1 = nutrient[1];
-var nutrition2 = nutrient[2];
-var nutrition3 = nutrient[3];
-var nutrition4 = nutrient[4];
-var nutrition5 = nutrient[5];
-var nutrition6 = nutrient[6];
-var nutrition7 = nutrient[7];
-var nutrition8 = nutrient[8];
-var nutrition9 = nutrient[9];
+var nutrition0 = nutrient[0].reverse();
+var nutrition1 = nutrient[1].reverse();
+var nutrition2 = nutrient[2].reverse();
+var nutrition3 = nutrient[3].reverse();
+var nutrition4 = nutrient[4].reverse();
+var nutrition5 = nutrient[5].reverse();
+var nutrition6 = nutrient[6].reverse();
+var nutrition7 = nutrient[7].reverse();
+var nutrition8 = nutrient[8].reverse();
+var nutrition9 = nutrient[9].reverse();
 
 console.log(nutrition0);
 var n0x = [];
