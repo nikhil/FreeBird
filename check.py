@@ -31,7 +31,7 @@ for subscriber in subscriptions.find():
         if str(status.text).find("I can't take it"):
             client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
             doctorMessage = "Hello " + name +",\n You patient: "+handle+" needs urgent attention due to an alarming message submitted on twitter"
-            doctorPhone = "+"+number
+            doctorPhone = "+1"+number
             message = client.messages.create(body=doctorMessage,
                     to=doctorPhone,
                     from_="+17326540788") 
