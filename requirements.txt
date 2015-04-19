@@ -2,3 +2,4 @@ requests>=2.5.1
 pymongo>=2.7
 tweepy>=3.1.0
 twilio>=3.6.9
+numpy>=1.9.2

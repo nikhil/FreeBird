@@ -6,7 +6,7 @@ from flask import Flask, request, flash, url_for, redirect, \
 from pymongo import MongoClient
 import tweepy
 import string
-
+import numpy
 
 app = Flask(__name__)
 app.config.from_pyfile('freebirdapp.cfg')
@@ -95,6 +95,7 @@ def my_form_post():
     for status in result:
         firstSplit = str(status.text).split("f:")
         FoodOnStatus = firstSplit[1].split(",")
+        needToAppend = True
         for someFood in FoodOnStatus:
             foodtrimed1 = someFood.lstrip()
             foodtrimed2 = foodtrimed1.rstrip()
@@ -107,11 +108,17 @@ def my_form_post():
                 foodnutrients = foodnutrients['report']['foods'][0]['nutrients']
                 iterator = 0
                 for SomeNutrient in foodnutrients:
-                    if SomeNutrient['value'] != "--":
-                        nutrientList[iterator].append(float(SomeNutrient['value']))
+                    if needToAppend:
+                        if SomeNutrient['value'] != "--":
+                            nutrientList[iterator].append(float(SomeNutrient['value']))
+                        else:
+                            nutrientList[iterator].append(0)
+                        iterator = iterator +1
                     else:
-                        nutrientList[iterator].append(0)
-                    iterator = iterator +1
+                        if SomeNutrient['value'] != "--":
+                            nutrientList[iterator][0]= nutrientList[iterator][0] + float(SomeNutrient['value'])
+                        iterator = iterator +1
+
         secondSplit = firstSplit[0].split("i:")
         interaction = secondSplit[1].lstrip()
         interactList.append(float(interaction))
@@ -123,6 +130,52 @@ def my_form_post():
         Alchemyparams = {'apikey': 'd8894db2dd60aed653e7bd91ea854ce91f46ec85', 'text': str(journal), 'outputMode': 'json'}
         analyzedString = requests.get('http://access.alchemyapi.com/calls/text/TextGetTextSentiment',params=Alchemyparams).json()
         scoreList.append(float(analyzedString['docSentiment']['score']))
+    var maxc = 0;
+    var maxstr = ""
+    if abs(numpy.corrcoef(scoreList,sleepList) > abs(maxc):
+        maxc = numpy.corrcoef(scoreList,sleepList)
+        maxstr = "Sleep"
+    if abs(numpy.corrcoef(scoreList,interactList) > abs(maxc):
+        maxc = numpy.corrcoef(scoreList,interactList)
+        maxstr = "Interactions"
+    if abs(numpy.corrcoef(scoreList,nutrientList[0]) > abs(maxc):
+        maxc = numpy.corrcoef(scoreList,nutrientList[0])
+        maxstr = "Sleep"
+    if abs(numpy.corrcoef(scoreList,nutrientList[1]) > abs(maxc):
+        maxc = numpy.corrcoef(scoreList,nutrientList[1])
+        maxstr = "Sleep"
+    if abs(numpy.corrcoef(scoreList,nutrientList[2]) > abs(maxc):
+        maxc = numpy.corrcoef(scoreList,nutrientList[2])
+        maxstr = "Sleep"
+    if abs(numpy.corrcoef(scoreList,nutrientList[3]) > abs(maxc):
+        maxc = numpy.corrcoef(scoreList,nutrientList[3])
+        maxstr = "Sleep"
+    if abs(numpy.corrcoef(scoreList,nutrientList[4]) > abs(maxc):
+        maxc = numpy.corrcoef(scoreList,nutrientList[4])
+        maxstr = "Sleep"
+    if abs(numpy.corrcoef(scoreList,nutrientList[5]) > abs(maxc):
+        maxc = numpy.corrcoef(scoreList,nutrientList[5])
+        maxstr = "Sleep"
+    if abs(numpy.corrcoef(scoreList,nutrientList[6]) > abs(maxc):
+        maxc = numpy.corrcoef(scoreList,nutrientList[6])
+        maxstr = "Sleep"
+    if abs(numpy.corrcoef(scoreList,nutrientList[7]) > abs(maxc):
+        maxc = numpy.corrcoef(scoreList,nutrientList[7])
+        maxstr = "Sleep"
+    if abs(numpy.corrcoef(scoreList,nutrientList[8]) > abs(maxc):
+        maxc = numpy.corrcoef(scoreList,nutrientList[8])
+        maxstr = "Sleep"
+    if abs(numpy.corrcoef(scoreList,nutrientList[9]) > abs(maxc):
+        maxc = numpy.corrcoef(scoreList,nutrientList[9])
+        maxstr = "Slenep"
+
+   
+
+
+            
+
+        
+            
     return render_template('PatientInfo.html',nutrientList=nutrientList,interactList=interactList,sleepList=sleepList,scoreList=scoreList) 
 @app.route('/subscribe',methods=['GET', 'POST'])
 def subscribe():
