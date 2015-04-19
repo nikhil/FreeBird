@@ -3,12 +3,16 @@
   margin: 0 auto;
   max-width: 840px;
   text-align: center;
-  font-family: sans-serif;
+  font-family: Lato, sans-serif;
   padding: 0px;
   padding-top: 30px;
   background-color: #fdf6e3;
   color: #004C4C
 }	
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Arvo, sans-serif;
+}
 
 #div1
 {
