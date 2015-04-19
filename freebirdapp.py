@@ -84,7 +84,7 @@ def my_form_post():
                 foodselected = nutritionFood.json()['list']['item'][0]['ndbno']
                 nutrientsparams = {'api_key': 'hUcSk43rUxao7dedHXut06RxFf4oo8mdtsagoFbv','format':'json','ndbno': foodselected, 'nutrients':nutrientid}
                 foodnutrients = requests.get('http://api.nal.usda.gov/usda/ndb/nutrients',params = nutrientsparams).json()
-                foodnutrients = foodnutrients['report']['foods']['nutrients']
+                foodnutrients = foodnutrients['report']['foods'][0]['nutrients']
                 iterator = 0
                 for SomeNutrient in foodnutrients:
                     if SomeNutrient.value != "--":
