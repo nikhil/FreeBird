@@ -144,7 +144,7 @@ def my_form_post():
         maxstr = "Nutrition"
     if abs(numpy.corrcoef(scoreList,nutrientList[1]) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,nutrientList[1])
-        maxstr = "Sleep"
+        maxstr = "Nutrition1"
     if abs(numpy.corrcoef(scoreList,nutrientList[2]) > abs(maxc):
         maxc = numpy.corrcoef(scoreList,nutrientList[2])
         maxstr = "Sleep"
