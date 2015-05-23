@@ -3,20 +3,13 @@ import tweepy
 import requests
 from twilio.rest import TwilioRestClient
 from pymongo import MongoClient
+from secret import TwilioSID, TwilioTOKEN, consumer_key, consumer_secret, access_token, access_token_secret
 
-
-consumer_key = 'srvKbL93bcw21SqEVg2err0f5'
-consumer_secret = 'jx10iqIW2suFUNHbGcYZBcZStpVfuq4kiEKCpiQBvlybI4urV8'
-access_token = '3167857703-tAu2B9E6rqRmzoqMvlzKMX4qdQUEcaoC4wnd4uP'
-access_token_secret = 'rjOaYaXahSntjMgAazr1g7qpZzhP4drI4pFR0mbONqqn1'
 
 auth = tweepy.OAuthHandler(consumer_key,consumer_secret)
 auth.set_access_token(access_token,access_token_secret)
 api = tweepy.API(auth)
 
-# put your own credentials here 
-ACCOUNT_SID = "ACd458c1d2873d89890101ad9ac3de1d3e" 
-AUTH_TOKEN = "dc3394a65d05b60691348f75056bf943" 
 
 mongoUrl = os.environ['OPENSHIFT_MONGODB_DB_URL']
 client = MongoClient(mongoUrl)
@@ -29,7 +22,7 @@ for subscriber in subscriptions.find():
     patientData = api.user_timeline(handle)
     for status in patientData:
         if str(status.text).find("I can't take it") and subscriber['sentMsg'] != 1:
-            client = TwilioRestClient(ACCOUNT_SID, AUTH_TOKEN)
+            client = TwilioRestClient(TwilioSID, TwilioTOKEN)
             doctorMessage = "Hello " + name +",\n Your patient: "+handle+" needs urgent attention due to an alarming message submitted on twitter \n-FreeBird"
             doctorPhone = "+1"+number
             message = client.messages.create(body=doctorMessage,

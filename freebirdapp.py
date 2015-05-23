@@ -7,14 +7,11 @@ from pymongo import MongoClient
 import tweepy
 import string
 import numpy
+from secret import TwilioSID, TwilioTOKEN, consumer_key, consumer_secret, access_token, access_token_secret
+
 
 app = Flask(__name__)
 app.config.from_pyfile('freebirdapp.cfg')
-
-consumer_key = 'srvKbL93bcw21SqEVg2err0f5'
-consumer_secret = 'jx10iqIW2suFUNHbGcYZBcZStpVfuq4kiEKCpiQBvlybI4urV8'
-access_token = '3167857703-tAu2B9E6rqRmzoqMvlzKMX4qdQUEcaoC4wnd4uP'
-access_token_secret = 'rjOaYaXahSntjMgAazr1g7qpZzhP4drI4pFR0mbONqqn1'
 
 nutrientid = [301, 205, 601, 208, 291, 303, 304, 309, 255, 204]
 nutrientid2 = [578, 401, 324, 323, 430, 255, 309, 204]
