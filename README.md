@@ -1,10 +1,10 @@
 <img src="imgprogram.png">
-#FreeBird
+# FreeBird
 Helps allow Doctors easily monitor and visualize the mental health of patients, dietary, and sleeping pattern. Correlates nutrition and sleep with the changes in mood.
 
 http://freebird-nikhilkumar516.rhcloud.com/
 
-#Format of a twitter post
+# Format of a twitter post
 ```
 I am very excited today. I feel very cheerful.
 s: 8
@@ -15,7 +15,7 @@ f: chicken, pasta
 `i` represents interactions<br>
 `f` represents food<br>
 
-#Technologies used
+# Technologies used
 
 * twitter
 * twilio
