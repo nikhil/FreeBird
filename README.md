@@ -1,8 +1,7 @@
 <img src="imgprogram.png">
+
 # FreeBird
 Helps allow Doctors easily monitor and visualize the mental health of patients, dietary, and sleeping pattern. Correlates nutrition and sleep with the changes in mood.
-
-http://freebird-nikhilkumar516.rhcloud.com/
 
 # Format of a twitter post
 ```
